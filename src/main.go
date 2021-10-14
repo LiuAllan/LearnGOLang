@@ -35,4 +35,19 @@ func main() { // Entry point of the application
 	var scoreTwo float64 = 3845934578734859.234234234
 	scoreThree := 1.5 // Shorthand inferred as float64
 	fmt.Println(scoreOne, scoreTwo, scoreThree)
+
+	// Print
+	fmt.Print("Print, ")  // Does not add a new line
+	fmt.Print("world \n") // Escape character for new line
+	fmt.Println("my age is", ageOne, "and the score is", scoreOne)
+
+	// Formatting string (Printf)
+	fmt.Printf("my age is %v and the score is %v \n", ageOne, scoreOne)  // Order of variables matters
+	fmt.Printf("my name is %q and the score is %q \n", nameOne, nameTwo) // Order of variables matters
+	fmt.Printf("age is of type %T \n", ageOne)                           // Outputs the type of the variable
+	fmt.Printf("you scored %0.1f \n", 22.55)                             // Order of variables matters
+
+	// Save Printf
+	var str = fmt.Sprintf("my age is %v and the score is %v \n", ageOne, scoreOne)
+	fmt.Println("The save string is: ", str)
 }
