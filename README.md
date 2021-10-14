@@ -13,4 +13,4 @@ Repository for learning GO lang.
 - One main() function allowed in the application
 - Methods on imported packages all start with a capital letter ie) Println
 - Running the program: 
-  - go run <filename>
+> go run filename.go
