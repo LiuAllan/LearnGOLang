@@ -54,7 +54,7 @@ https://pkg.go.dev/fmt@go1.17.2
 ## Arrays and Slices
 - If the length of an array is declared, the array is a fixed and can't be changed
 - Arrays are created using curley braces instead of square brackets
-> var ages [3]int = [3]int{20, 25, 30} // ages will be an array of length 3 of all ints
+> var ages [3]int = [3]int{20, 25, 30} // ages will be an array of length 3 of all ints  
 > var ages = [3]int{20, 25, 30} // Same as above  
 > names := [4]string{"yoshi", "bowser", "mario", "wario"}  
 > fmt.Println(ages, len(ages)) // len() grabs the length of the array
