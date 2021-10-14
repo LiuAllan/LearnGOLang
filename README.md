@@ -70,3 +70,23 @@ https://pkg.go.dev/fmt@go1.17.2
 > rangeOne := names[1:3] // Includes from 1 to but not including 3  
 > rangeTwo := names[2:]   // From index 2 to the end, including end  
 > rangeThree := names[:3] // From start to index 3 but not including 3  
+
+## The Standard Library
+- Strings package
+> greeting := "hello there world"  
+> fmt.Println(strings.Contains(greeting, "hello"))         // returns true or false if > strings contain value  
+> fmt.Println(strings.ReplaceAll(greeting, "hello", "Hi")) // Does not mutate original > variable  
+> fmt.Println(strings.ToUpper(greeting))  
+> fmt.Println(strings.Index(greeting, "ll")) // Get index of where the value starts  
+> fmt.Println(strings.Split(greeting, " "))  // Split string into a splice by delimitter  
+- Sort package
+> newAges := []int{45, 20, 35, 30, 75, 60, 50, 25}  
+> sort.Ints(newAges) // Alters the original variable  
+> fmt.Println(newAges)  
+> fmt.Println(sort.SearchInts(newAges, 30)) // Searches slice and returns index  
+
+> newStrings := []string{"one", "two", "five", "three"}  
+> sort.Strings(newStrings)  
+> fmt.Println(newStrings)  
+> fmt.Println(sort.SearchStrings(newStrings, "five"))  
+https://pkg.go.dev/std
