@@ -27,18 +27,12 @@ Repository for learning GO lang.
 
 - Ints can be typed to use bits. Prevents certain numbers to be used within the scope.
 > var ageOne int = 20  
-
 > var ageTwo = 30  
-
 > ageThree := 40  
-
 > var numOne int8 = 25 // 8 bits  
-
 > var numThree uint = 25 // Prevents the use of negative ints (0 - 255)
 
 - Floats must specify the bit-size. Bit-size dictate the range of numbers we can use
 > var scoreOne float32 = 25.98  
-
 > var scoreTwo float64 = 3845934578734859.234234234  
-
 > scoreThree := 1.5 // Shorthand inferred as float64  
