@@ -19,11 +19,8 @@ Repository for learning GO lang.
 - Strings in GO must use double quotes: ""
 - Variables can be typed or automatically infer it:
 > var nameOne string = "mario"  
-
 > var nameTwo = "luigi"  
-
 > var nameThree string // Variable is initialized. If no value is given, the string is empty  
-
 > nameFour := "yoshi" // Shorthand that is only used to initialize the variable the first time  
 
 - ":=" Can't be used **outside** of a function
