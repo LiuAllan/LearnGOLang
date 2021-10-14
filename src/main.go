@@ -50,4 +50,22 @@ func main() { // Entry point of the application
 	// Save Printf
 	var str = fmt.Sprintf("my age is %v and the score is %v \n", ageOne, scoreOne)
 	fmt.Println("The save string is: ", str)
+
+	// Arrays
+	// var ages [3]int = [3]int{20, 25, 30} // ages will be an array of length 3 of all ints
+	var ages = [3]int{20, 25, 30}
+	names := [4]string{"yoshi", "bowser", "mario", "wario"}
+	fmt.Println(ages, names, len(ages)) // len() grabs the length of the array
+
+	// Slices (use arrays under the hood)
+	scores := []int{100, 50, 60}
+	scores[2] = 25              // Set index 2 to be value 25
+	scores = append(scores, 85) // append returns a new slice
+	fmt.Println(scores, len(scores))
+
+	// Slice ranges
+	rangeOne := names[1:3]  // Includes from 1 to but not including 3
+	rangeTwo := names[2:]   // From index 2 to the end, including end
+	rangeThree := names[:3] // From start to index 3 but not including 3
+	fmt.Println(rangeOne, rangeTwo, rangeThree)
 }

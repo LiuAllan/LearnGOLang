@@ -49,4 +49,24 @@ Repository for learning GO lang.
 - Sprintf = Save printf allows ability to save the string into a variable
 > var str = fmt.Sprintf("my age is %v and the score is %v \n", ageOne, scoreOne)  
 > fmt.Println("The save string is: ", str)  
-- https://pkg.go.dev/fmt@go1.17.2
+https://pkg.go.dev/fmt@go1.17.2
+
+## Arrays and Slices
+- If the length of an array is declared, the array is a fixed and can't be changed
+- Arrays are created using curley braces instead of square brackets
+> var ages [3]int = [3]int{20, 25, 30} // ages will be an array of length 3 of all ints
+> var ages = [3]int{20, 25, 30} // Same as above  
+> names := [4]string{"yoshi", "bowser", "mario", "wario"}  
+> fmt.Println(ages, len(ages)) // len() grabs the length of the array
+
+- Slices use arrays under the hood but can manipulate arrays more
+- When no number is placed inside the square brackets, it specifies to use slices instead of arrays. They have no fixed length
+- Can append items to a slice
+> scores := []int{100, 50, 60}  
+> scores[2] = 25              // Set index 2 to be value 25  
+> scores = append(scores, 85) // append returns a new slice  
+> fmt.Println(scores, len(scores))  
+- Slice ranges:
+> rangeOne := names[1:3] // Includes from 1 to but not including 3  
+> rangeTwo := names[2:]   // From index 2 to the end, including end  
+> rangeThree := names[:3] // From start to index 3 but not including 3  
