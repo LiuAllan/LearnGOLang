@@ -109,7 +109,7 @@ https://pkg.go.dev/std
 > }  
 ## Booleans and Conditions
 - If and else statements work the same. They do not require brackets  
-
+```
     if x > 10 {
         fmt.Println("x is greater than 10")
     } else if x == 0 {
@@ -117,5 +117,6 @@ https://pkg.go.dev/std
     } else {
         fmt.Println("x is negative")
     }
+```
 
 ## Functions
