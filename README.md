@@ -58,7 +58,7 @@ fmt.Printf("my age is %v and the score is %v", ageOne, scoreOne)
 - Specifier "%T" outputs the type of the variable
 - Specifier "%f" outputs floats. This can be rounded to the nearest decimal point
 ```
-fmt.Printf("you scored %0.1f", 22.55) = "you scored 22.6"
+fmt.Printf("you scored %0.1f", 22.55) // Prints "you scored 22.6"
 ```
 - Sprintf = Save printf allows ability to save the string into a variable
 ```
