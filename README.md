@@ -107,15 +107,14 @@ https://pkg.go.dev/std
 > for index, value := range newStrings {  
 >     fmt.Printf("the position at index %v is %v \n", index, value)  
 > }  
-
 ## Booleans and Conditions
 - If and else statements work the same. They do not require brackets
-> if x > 10 {  
->     fmt.Println("x is greater than 10")  
-> } else if x == 0 {  
->     fmt.Println("x is 0")  
-> } else {  
->     fmt.Println("x is negative")  
-> }  
+    if x > 10 {
+        fmt.Println("x is greater than 10")
+    } else if x == 0 {
+        fmt.Println("x is 0")
+    } else {
+        fmt.Println("x is negative")
+    }
 
 ## Functions
