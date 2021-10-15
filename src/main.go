@@ -119,4 +119,45 @@ func main() { // Entry point of the application
 		fmt.Println("x is negative")
 	}
 
+	sayGreeting("mario")
+	sayBye("luigi")
+
+	cycle([]string{"cloud", "tifa"}, sayGreeting) // passing the function name
+	result := cycle([]string{"cloud", "tifa"}, sayBye)
+	fmt.Println(result)
+
+	firstname, secondname := getInitials("chris bumstead")
+	fmt.Println(firstname, secondname)
+}
+
+// function cycle takes a function as the 2nd parameter
+func cycle(n []string, f func(string)) string {
+	for _, v := range n {
+		f(v)
+	}
+	return "returns a string"
+}
+
+func sayGreeting(n string) {
+	fmt.Printf("Good morning %v \n", n)
+}
+
+func sayBye(n string) {
+	fmt.Printf("Goodbye %v \n", n)
+}
+
+// Function to return multiple values
+func getInitials(n string) (string, string) {
+	s := strings.ToUpper(n)
+	names := strings.Split(s, " ")
+
+	var initials []string
+	for _, v := range names {
+		initials = append(initials, v[:1]) // Gets first letter of each string
+	}
+
+	if len(initials) > 1 {
+		return initials[0], initials[1]
+	}
+	return initials[0], "_"
 }

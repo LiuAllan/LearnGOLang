@@ -139,13 +139,75 @@ for index, value := range newStrings {
 ## Booleans and Conditions
 - If and else statements work the same. They do not require brackets  
 ```
-    if x > 10 {
-        fmt.Println("x is greater than 10")
-    } else if x == 0 {
-        fmt.Println("x is 0")
-    } else {
-        fmt.Println("x is negative")
-    }
+if x > 10 {
+    fmt.Println("x is greater than 10")
+} else if x == 0 {
+    fmt.Println("x is 0")
+} else {
+    fmt.Println("x is negative")
+}
 ```
 
 ## Functions
+- Basic function with a parameter of type string
+```
+func sayGreeting(n string) {
+	fmt.Printf("Good morning %v \n", n)
+}
+```
+
+- It is possible to pass a function as a parameter
+```
+func main() {
+	cycle([]string{"cloud", "tifa"}, sayGreeting) // passing the function name
+	cycle([]string{"cloud", "tifa"}, sayBye)
+}
+
+// function cycle takes a function as the 2nd parameter
+func cycle(n []string, f func(string)) {
+	for _, v := range n {
+		f(v)
+	}
+}
+
+func sayGreeting(n string) {
+	fmt.Printf("Good morning %v \n", n)
+}
+
+func sayBye(n string) {
+	fmt.Printf("Goodbye %v \n", n)
+}
+```
+
+- You must specify the return type in the function
+```
+func cycle(n []string, f func(string)) string {
+	for _, v := range n {
+		f(v)
+	}
+	return "return a string"
+}
+```
+
+- Function can return multiple values. Specify all of its return type in brackets
+```
+func main() {
+    firstname, secondname := getInitials("chris bumstead") // Note we declare 2 variables
+}
+
+// Function to return multiple values
+func getInitials(n string) (string, string) {
+	s := strings.ToUpper(n)
+	names := strings.Split(s, " ")
+
+	var initials []string
+	for _, v := range names {
+		initials = append(initials, v[:1]) // Gets first letter of each string
+	}
+
+	if len(initials) > 1 {
+		return initials[0], initials[1]
+	}
+	return initials[0], "_"
+}
+```
