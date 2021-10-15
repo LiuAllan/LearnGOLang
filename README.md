@@ -90,3 +90,32 @@ https://pkg.go.dev/fmt@go1.17.2
 > fmt.Println(newStrings)  
 > fmt.Println(sort.SearchStrings(newStrings, "five"))  
 https://pkg.go.dev/std
+
+## Loops
+> x := 0  
+> for x < 5 {  
+>     fmt.Println("value of x is: ", x)  
+>     x++  
+> }  
+> 
+> for i := 0; i < len(newStrings); i++ {  
+>     fmt.Println(newStrings[i])  
+> }  
+> 
+> // Loop through slice and get each index and value  
+> // If we don't want to use the index or value, replace it with underscore "_"  
+> for index, value := range newStrings {  
+>     fmt.Printf("the position at index %v is %v \n", index, value)  
+> }  
+
+## Booleans and Conditions
+- If and else statements work the same. They do not require brackets
+> if x > 10 {  
+>     fmt.Println("x is greater than 10")  
+> } else if x == 0 {  
+>     fmt.Println("x is 0")  
+> } else {  
+>     fmt.Println("x is negative")  
+> }  
+
+## Functions
